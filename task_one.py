@@ -4,5 +4,26 @@
 # Пользователь вводит 2 числа. n - кол-во элементов первого множества. m - кол-во
 # элементов второго множества. Затем пользователь вводит сами элементы множеств.
 
+# Пример:
+# 11 6
+# 2 4 6 8 10 12 10 8 6 4 2
+# 3 6 9 12 15 18
+# 6 12
+
+from random import randint 
+n = int(input('введи количество элементов первого набора чисел n: '))
+m = int(input('введи количество элементов второго набора чисел m: '))
+set_one = [randint(0, 10) for _ in range(n)]
+set_two = [randint(0, 10) for _ in range(m)]
+print(set_one)
+print(set_two)
+unik_set_one = set(set_one)
+unik_set_two = set(set_two)
+for i in unik_set_one:
+    for j in unik_set_two:
+        if i == j:
+            print (i, end=' ')
+            break
 
 
+# ввел рандомные значения для упрощения ввода
