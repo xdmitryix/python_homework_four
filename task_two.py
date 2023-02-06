@@ -16,3 +16,17 @@
 # 9
 
 
+n = int(input('введи количество кустов N:'))
+if n <= 2:
+    print('меньше 2-х кустов быть не может !')
+else:
+    numbers = [i for i in range(1, n+1)]
+    num_len = len(numbers)
+    print(numbers)
+    max = numbers[1] + numbers [0] + numbers [-1]
+    if numbers[0] + numbers [-1] + numbers [-2] > max:
+        max = numbers[0] + numbers [1] + numbers [-1]
+    for i in range(1, num_len-1):
+        if numbers[i] + numbers[i-1] + numbers[i+1] > max:
+            max = numbers[i] + numbers[i-1] + numbers[i+1]
+    print(max)
